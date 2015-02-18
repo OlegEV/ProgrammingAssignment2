@@ -1,6 +1,10 @@
-## creates a list of 4 member functions: setmatrix, getmatrix, setInvmatrix and getInvmatrix. 
+##
+## The following two functions are used to cache the inverse of a matrix rather than compute it repeatedly.
+##
+
 ## 
-## Eval insverse of matrix and save in cache.
+## Creates a list of 4 member functions: setmatrix, getmatrix, setInvmatrix and getInvmatrix. 
+## 
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -23,9 +27,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }
 
-
-## Return a matrix that is the inverse of 'x', get cached version if exist.
-
+##
+## Return a matrix that is the inverse of 'x', get cached version if already computed it.
+##
 cacheSolve <- function(x, ...) {
     
     m <- x$getInverse()
